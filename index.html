@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8">
-    <title>Landing Page Three</title>
+    <title>Mi página</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <!-- ANIMATE.CSS -->
-    <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="./css/aos.css">
+    <script src="./js/aos.js"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- Custom CSS -->
@@ -19,7 +19,7 @@
 
     <!-- Header -->
     <header class="header">
-      <div class="header-content animated flash">
+      <div class="header-content">
         <img src="img/logo.png" alt="Fazt Logo" class="logo">
         <div class="title">
           Landing Page Three
@@ -34,21 +34,21 @@
     <div class="services text-center">
       <h3 class="title">Services</h3>
       <div class="container grid-3">
-        <div>
+        <div data-aos="fade-right">
           <i class="fab fa-youtube fa-5x"></i>
           <h3>Youtube</h3>
           <div>
             Consectetur itaque inventore odio tempora velit sunt et repellendus accusantium.
           </div>
         </div>
-        <div>
+        <div data-aos="fade-up">
           <i class="fab fa-blogger fa-5x"></i>
           <h3>Blog</h3>
           <div>
             Consectetur itaque inventore odio tempora velit sunt et repellendus accusantium.
           </div>
         </div>
-        <div>
+        <div data-aos="fade-left">
           <i class="fab fa-wordpress fa-5x"></i>
           <h3>Website</h3>
           <div>
@@ -59,7 +59,7 @@
     </div>
 
     <!-- About -->
-    <section class="about bg-light">
+    <section data-aos="fade-up" class="about bg-light">
       <div class="container text-center">
         <div class="grid-2">
           <div class="center">
@@ -75,7 +75,7 @@
       </div>
     </section>
 
-    <section>
+    <section  data-aos="fade-up" >
       <div class="container text-center">
         <div class="grid-2">
           <div>
@@ -95,6 +95,8 @@
     <footer class="text-center bg-light">
       <p>Fazt Web &copy; 2018 - All rights reserved</p>
     </footer>
-
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
