@@ -30,18 +30,21 @@ body {
 }
 .header-left, .header-right{
   display: inline-block;
+  height: 100%;
 }
 .header-left{
   width: 30%;
 }
 
-.header-right{
-  width: 69%;
+.header-left img{
+  width: 70%;
+  padding: 15%;
 }
 
-.header-left img{
-  height: auto;
-  width: 80%;
+.header-right{
+  width: 69%;
+  position: absolute;
+  top: 1em;
 }
 
 .title {
@@ -124,10 +127,28 @@ footer p {
 
 /* RESPONSIVE */
 @media (max-width: 560px) {
-  /* .header::after {
-    height: 100%;
-  } */
-  
+  .header-content{
+    height: 90%;
+    width: 90%;
+    margin: 5% 5%;
+  }
+  .header-left, .header-right {
+    height: 50%
+  }
+  .header-left{
+    width: 100%;
+    display: block;
+  }
+
+  .header-right{
+    top: initial;
+    bottom: 0;
+    margin-left: 15%;
+  }
+
+  .header-right h2{
+    margin-top: 0;
+  }
   .header-content {
     top: 5%;
     margin-top: 5px;
