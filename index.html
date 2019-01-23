@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <!-- AOS Animation -->
     <link rel="stylesheet" href="./css/aos.css">
     <script src="./js/aos.js"></script>
@@ -20,16 +20,44 @@
     <!-- Header -->
     <header class="header">
       <div class="header-content">
-        <div class="header-left">
           <img src="./img/logo.png" alt="Foto de Carlos Arellano">
-        </div
-        ><div class="header-right">
-            <h2 class="title">Desarollador web full stack</h2>
-            <p>Mi nombre es Carlos Arellano, soy estudiante universitario y un apasionado por el desarollo web. Busco nuevos retos para poner a prueba mis conocimientos y capacidades.</p>
-            <p>En mis tiempos libres disfruto de actividades como la lectura o escuchar música.</p>
-        </div>
+          <h1 class="title">Carlos Arellano</h2>
+          <p class="sub-title">Desarollador Web Full Stack</p>
+      </div>
+      <div class="scroll-down">
+        <i class="fas fa-chevron-down"></i>
+        <button>
+          Conocer más ...
+        </button>
       </div>
     </header>
+
+    <div data-aos="fade-up" class="services bg-light text-center">
+        <h3 class="title">Sobre mi</h3>
+        <div class="container grid-3">
+          <div>
+            <i class="fab fa-youtube fa-5x"></i>
+            <h3>Youtube</h3>
+            <div>
+              Consectetur itaque inventore odio tempora velit sunt et repellendus accusantium.
+            </div>
+          </div>
+          <div>
+            <i class="fab fa-blogger fa-5x"></i>
+            <h3>Blog</h3>
+            <div>
+              Consectetur itaque inventore odio tempora velit sunt et repellendus accusantium.
+            </div>
+          </div>
+          <div>
+            <i class="fab fa-wordpress fa-5x"></i>
+            <h3>Website</h3>
+            <div>
+              Consectetur itaque inventore odio tempora velit sunt et repellendus accusantium.
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- Services -->
     <div data-aos="fade-up" class="services bg-dark text-center">
@@ -97,7 +125,9 @@
       <p>Fazt Web &copy; 2018 - All rights reserved</p>
     </footer> -->
     <script>
-      AOS.init();
+      AOS.init({
+        disable: 'mobile',
+      });
     </script>
   </body>
 </html>
