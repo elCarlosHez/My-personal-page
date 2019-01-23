@@ -2,7 +2,8 @@ body {
   background: #000;
   margin: 0;
   color: #fff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 
 .header::after {
@@ -20,10 +21,9 @@ body {
 .header-content {
   position: absolute;
   z-index: 1;
-  top: 0%;
-  left: 0%;
-  margin: 10% 25%;
-  width: 50%;
+  top: 15%;
+  left: 46%;
+  width: auto;
   height: 60%;
   text-align: center;
 }
@@ -55,9 +55,8 @@ body {
 
 .scroll-down{
   position: absolute;
-  bottom: 10%;
-  left: 45.5%;
-  width: auto;
+  bottom: 10%;  
+  left: 50%; 
   z-index: 1;
 }
 
@@ -192,8 +191,9 @@ footer p {
 @media (max-width: 560px) {
   .header-content{
     height: 90%;
-    width: 90%;
-    margin: 2em 5%;
+    top: 15%;
+    left: 5%;
+    width: auto;
   }
   .header-content {
     top: 5%;

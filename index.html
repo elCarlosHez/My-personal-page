@@ -5,11 +5,9 @@
     <title>Mi página</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <!-- AOS Animation -->
     <link rel="stylesheet" href="./css/aos.css">
-    <script src="./js/aos.js"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- Custom CSS -->
@@ -24,7 +22,7 @@
           <h1 class="title">Carlos Arellano</h2>
           <p class="sub-title">Desarollador Web Full Stack</p>
       </div>
-      <div class="scroll-down">
+      <div id="scroll-down" class="scroll-down">
         <i class="fas fa-chevron-down"></i>
         <button>
           Conocer más ...
@@ -32,7 +30,7 @@
       </div>
     </header>
 
-    <div data-aos="fade-up" class="services bg-light text-center">
+    <div id="abaout" data-aos="fade-up" class="services bg-light text-center">
         <h3 class="title">Sobre mi</h3>
         <div class="container grid-3">
           <div>
@@ -124,10 +122,9 @@
     <!-- <footer class="text-center bg-light">
       <p>Fazt Web &copy; 2018 - All rights reserved</p>
     </footer> -->
-    <script>
-      AOS.init({
-        disable: 'mobile',
-      });
-    </script>
+    <!-- Aos Script -->
+    <script src="./js/aos.js"></script>
+    <!-- Main Script -->
+    <script src="./js/main.js"></script>
   </body>
 </html>
