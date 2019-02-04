@@ -12,26 +12,52 @@ i,ul,ol{
   list-style-type: none;
 }
 
-.header::after {
-  content: '';
+.header{
   height: 100vh;
   width: 100%;
-  background-image: url('../img/header_bg.jpg');
+}
+
+@keyframes opacity-background{
+  0% { filter: opacity(0.0); }
+  100% { filter: opacity(0.3); }
+}
+
+@keyframes line {
+  0%   { width: 0 }
+  50% { width: 0 }
+  100% { width: 80%; }
+}
+
+@keyframes appear{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.header::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-image: url('/img/header_bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  filter: opacity(0.4);
+  animation: opacity-background 3s forwards;
 }
 
 .header-content {
   position: absolute;
   z-index: 1;
-  top: 15%;
-  left: 46%;
-  width: auto;
-  height: 60%;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  height: 100%;
   text-align: center;
+  animation: appear 5s forwards;
 }
 
 .header-content img{
@@ -40,6 +66,29 @@ i,ul,ol{
 
 .header-content h1{
   margin: 0;
+  width: 10em;
+  margin: auto;
+  position: relative;
+}
+
+.header-content h1::after, .header-content h1::before{
+  content: '';
+  height: 10px;
+  width: 80%;
+  display: block;
+  position: absolute;
+  background-color: white;
+  animation: line 2s forwards;
+}
+
+.header-content h1::after{
+  left: 10%;
+  top: -10%;
+}
+
+.header-content h1::before{
+  right: 10%;
+  bottom: -80%;
 }
 
 .title {
@@ -63,9 +112,12 @@ i,ul,ol{
 
 .scroll-down{
   position: absolute;
-  bottom: 10%;  
-  left: 50%; 
+  bottom: 10%;
+  width: 100%;
+  text-align: center;  
+  left: 0; 
   z-index: 1;
+  animation: appear 5s forwards;
 }
 
 .scroll-down button{
@@ -90,7 +142,7 @@ i,ul,ol{
 .scroll-down i{
   position: absolute;
   top: -170%;
-  left: 45%;
+  left: 50%;
   width: 24px;
   height: 24px;
   margin-left: -12px;
@@ -306,19 +358,17 @@ footer p {
 @media (max-width: 560px) {
   .header-content{
     height: 90%;
-    top: 15%;
-    left: 5%;
+    top: 25%;
+    left: 0;
     width: auto;
-  }
-  .header-content {
-    top: 5%;
-    margin-top: 5px;
-  }
-  .scroll-down{
-    left: 25%;
   }
   .grid-3, .grid-2 {
     grid-template-columns: 1fr;
+  }
+
+  .header-content h1{
+    width: 8em;
+
   }
 
   .skills div {
