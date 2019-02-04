@@ -359,9 +359,15 @@ footer p {
   .header-content{
     height: 90%;
     top: 25%;
-    left: 0;
+    left: -4%;
     width: auto;
   }
+
+  .header::after{
+    background-attachment: fixed;
+    background-position: -15em -12em;
+  }  
+
   .grid-3, .grid-2 {
     grid-template-columns: 1fr;
   }
