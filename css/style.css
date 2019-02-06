@@ -17,6 +17,11 @@ i,ul,ol{
   width: 100%;
 }
 
+a {
+  text-decoration: none !important;
+}
+
+
 @keyframes opacity-background{
   0% { filter: opacity(0.0); }
   100% { filter: opacity(0.3); }
@@ -35,6 +40,49 @@ i,ul,ol{
   to {
     opacity: 1;
   }
+}
+
+@keyframes appear-next{
+  0%   { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.icons{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  padding: 25em;
+  height: auto;
+  z-index: 1;
+  animation: appear-next 4s forwards;
+}
+
+.icons a{
+  width: 20%;
+  height: 2em;
+  color: white;
+}
+
+.icons a:hover{
+  color: #888888;
+}
+
+.message{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20em;
+  font-family: 'Roboto',sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  z-index: 1;
+  font-size: 28px;
+  animation: appear-next 5s forwards;
 }
 
 .header::after {
@@ -366,7 +414,17 @@ footer p {
   .header::after{
     background-attachment: fixed;
     background-position: -15em -12em;
-  }  
+  }
+  
+  .icons{
+    padding: 0;
+    margin-top: 23em;
+  }
+
+  .message{
+    padding: 0;
+    margin-top: 15em;
+  }
 
   .grid-3, .grid-2 {
     grid-template-columns: 1fr;
