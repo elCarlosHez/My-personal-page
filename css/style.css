@@ -54,9 +54,10 @@ a {
   top: 0;
   width: 100%;
   text-align: center;
-  padding: 25em;
+  margin-top: 23%;
   height: auto;
-  z-index: 1;
+  font-size: 20px;
+  z-index: 2;
   animation: appear-next 4s forwards;
 }
 
@@ -144,12 +145,12 @@ a {
   padding-top: 0.5em;
   font-family: 'Roboto', sans-serif;
   text-transform: capitalize;
-  font-size: 3rem;
+  font-size: 46px;
 }
 
 .sub-title{
   font-weight: bold;
-  font-size: 1em;
+  font-size: 16px;
   text-transform: uppercase;
 }
 
@@ -406,24 +407,30 @@ footer p {
 @media (max-width: 560px) {
   .header-content{
     height: 90%;
-    top: 25%;
-    left: -4%;
+    top: 15%;
+    left: 10px;
     width: auto;
   }
 
   .header::after{
-    background-attachment: fixed;
-    background-position: -15em -12em;
+    background-attachment: cover;
+    background-position: left;
+  }
+
+  .title{
+    font-size: 42px;
   }
   
   .icons{
     padding: 0;
-    margin-top: 23em;
+    font-size: 25px;
+    margin-top: 10em;
   }
-
+  
   .message{
     padding: 0;
     margin-top: 15em;
+    font-size: 22px; 
   }
 
   .grid-3, .grid-2 {
