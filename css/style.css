@@ -399,8 +399,23 @@ li i{
   border-color: transparent transparent transparent #333;
 }
 
-footer p {
-  margin: 0;
+footer .container{
+  padding-bottom: 1em;
+  padding-top: 0.5em;
+}
+
+footer a {
+  display: block;
+  text-align: center;
+  margin: 1rem 0;
+  color: white;
+}
+
+footer h3{
+  padding-bottom: 0.2em;
+  width: 80%;
+  margin: 1em auto;
+  border-bottom: 2px solid white;
 }
 
 /* RESPONSIVE */

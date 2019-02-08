@@ -2,10 +2,11 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8">
-    <title>Mi página</title>
+    <title>Mi página | Carlos Arellano</title>
     <!-- Cache -->
     <meta http-equiv="Cache-control" content="public">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico?v=2" type="image/x-icon"/>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,700i" rel="stylesheet">
     <!-- AOS Animation -->
@@ -18,7 +19,7 @@
   <body>
 
     <!-- Header -->
-    <header class="header">
+    <header id="header" class="header">
       <div class="header-content">
           <h1 class="title">Carlos Arellano</h2>
           <p class="sub-title">Desarollador Web Full Stack</p>
@@ -27,7 +28,7 @@
         <a href="https://github.com/elCarlosHez" target="_blank"
           ><i class="fab fa-github-square fa-2x"></i>
         </a>
-        <a href="mailto:luis.harellano@alumnos.udg.mx"
+        <a href="mailto:contacto@elcarlosarellano.com"
           ><i class="fas fa-envelope-square fa-2x"></i>
         </a>
         <a href="https://www.linkedin.com/in/el-carlos-arellano" target="_blank">
@@ -62,7 +63,7 @@
     </section>
 
     <!-- Skills -->
-    <section data-aos="fade-up" class="skills bg-dark text-center">
+    <section id="habilidades" data-aos="fade-up" class="skills bg-dark text-center">
       <h3 class="title">Habilidades</h3>
       <div class="container grid-2">
         <div>
@@ -91,8 +92,8 @@
       </div>
     </section>
 
-    <!-- Preparación -->
-    <section data-aos="fade-up" class="experience bg-light">
+    <!-- Experience -->
+    <section  id="experience" data-aos="fade-up" class="experience bg-light">
       <div class="container text-center">
         <div class="grid-3">
           <div class="center text-center">
@@ -130,21 +131,32 @@
       </div>
     </section>
 
-    <section data-aos="fade-up" class="bg-dark" >
+    <!-- Footer section -->
+    <footer class="bg-dark" >
       <div class="container text-center">
-        <div class="grid-2">
+        <div class="grid-3">
           <div>
-            <h3 class="title">About Us</h3>
-            <p>
-              <span>Amet nihil magnam maxime dolor qui veritatis quaerat explicabo fugiat similique. Facilis ea reprehenderit laboriosam molestias odit officia. Facilis sunt harum tempore suscipit placeat beatae? Autem iure dignissimos maxime ducimus.</span>
-            </p>
+            <h3>Secciones</h3>
+            <a href="#header">Inicio</a>
+            <a href="#abaout">Sobre mí ...</a>
+            <a  href="#skills">Habilidades</a>
+            <a href="#experience">Educación y experiencia</a>
+            <a href="#contact">Contacto</a>
           </div>
           <div class="center">
-            <i class="fab fa-node-js fa-10x"></i>
+            <h3>Lenguaje</h3>
+            <a href="#">Español</a>
+            <a href="#">Ingles</a>
           </div>
+          <div>
+              <h3>Contactamé</h3>
+              <a href="mailto:contacto@elcarlosarellano.com">contacto@elcarlosarellano.com</a>
+              <a href="https://www.linkedin.com/in/el-carlos-arellano" target="_blank">Linkedin</a>
+              <a href="https://api.whatsapp.com/send?phone=523313212251"><i class="fab fa-whatsapp"></i> +52 33 13 21 2251</a>
+            </div>
         </div>
       </div>  
-    </section>
+    </footer>
     <!-- Aos Script -->
     <script src="./js/aos.js"></script>
     <!-- Main Script -->
