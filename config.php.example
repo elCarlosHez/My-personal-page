@@ -1,0 +1,26 @@
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require_once __DIR__ . '/vendor/autoload.php';
+
+// We are going to return an json response
+header('Content-Type: application/json');
+
+$mail = new PHPMailer(true);
+$mail->isSMTP();                                     
+$mail->Host = 'YourEmailServer'; 
+$mail->SMTPAuth = true;
+$mail->Username = 'YourEmail';
+$mail->Password = 'YourEmailPassword';
+$mail->SMTPSecure = 'tls';
+$mail->Port = 587;
+$captchaKey = 'YourCaptchaKey';
+
+
+//Recipients
+$mail->setFrom('');
+$mail->addAddress('');
+
+$mail->isHTML(true);
+?>
