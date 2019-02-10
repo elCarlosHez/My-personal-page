@@ -12,6 +12,9 @@
     <!-- AOS Animation -->
     <link rel="stylesheet" href="./css/aos.css">
     <!-- Font Awesome -->
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@8.0.6/dist/sweetalert2.min.css">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -137,11 +140,12 @@
         <div class="grid-2">
           <div class="center text-center">
             <h3 class="title">Contacto</h3>
-            <form action="/" method="post" class="form-contact">
+            <form id="form-email" action="/mail.php" method="post" class="form-contact">
+              <input id="captchav3" type="hidden" name="recaptcha" value="">
               <input type="text" name="name" placeholder="Nombre" required>
               <input type="email" name="email" placeholder="Correo electronico" required>
               <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje" required></textarea>
-              <input type="submit" value="Enviar">
+              <input id="sendEmail" type="submit" value="Enviar">
             </form>
           </div>
           <div class="center text-center">
@@ -179,6 +183,10 @@
     </footer>
     <!-- Aos Script -->
     <script src="./js/aos.js"></script>
+    <!-- reCaptcha v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lfsc5AUAAAAAECXlGE6YiH2YrJ9cwLNIaFe0iqg"></script>
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.0.6/dist/sweetalert2.all.min.js"></script>
     <!-- Main Script -->
     <script src="./js/main.js"></script>
   </body>

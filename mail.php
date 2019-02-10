@@ -27,10 +27,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' &&
                   'message' => 'Mensaje enviado'
                 ]]);
         } catch (Exception $e) {
-            http_response_code(422);
+            http_response_code(400);
             echo json_encode(["error" => 
                 [
-                  "code" => 422,
+                  "code" => 400,
                   "message" => $e->getMessage(),
                 ]]);
         }

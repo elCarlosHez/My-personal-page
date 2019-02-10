@@ -76,7 +76,7 @@ a {
 
 .header-icons{
   grid-area: icons;
-  height: auto;
+  margin: auto 0;
   font-size: 20px;
   animation: appear-next 4s forwards;
 }
