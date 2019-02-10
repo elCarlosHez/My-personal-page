@@ -5,32 +5,146 @@ body {
   font-family: sans-serif;
   scroll-behavior: smooth;
 }
+
 * {
   box-sizing: border-box;
 }
+
 i,ul,ol{
   list-style-type: none;
-}
-
-.header{
-  height: 100vh;
-  width: 100%;
 }
 
 a {
   text-decoration: none !important;
 }
 
+.header{
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  text-align: center;
+  grid-template-columns: 20% auto 20%;
+  grid-template-rows: repeat(5,20%);
+  grid-template-areas: 
+  ". . ."
+  ". title ."
+  ". icons ."
+  ". message ."
+  ". down ."
+}
+
+.header::after {
+  content: '';
+  height: 100%; width: 100%;
+  position: absolute;
+  background-image: url('/img/header_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  animation: opacity-background 3s forwards;
+}
+
+.header-title{
+  grid-area: title;
+  animation: appear 5s forwards;
+}
+
+.header-title h1{
+  position: relative;
+}
+
+.header-title h1::after, .header-title h1::before{
+  content: '';
+  height: 10px;
+  width: 60%;
+  display: block;
+  position: absolute;
+  background-color: #f4f4f4;
+  animation: line 2s forwards;
+}
+
+.header-title h1::after{
+  left: 20%;
+  top: -15%;
+}
+
+.header-title h1::before{
+  right: 20%;
+  bottom: -100%;
+}
+
+.header-icons{
+  grid-area: icons;
+  height: auto;
+  font-size: 20px;
+  animation: appear-next 4s forwards;
+}
+
+.header-icons a{
+  color: #f4f4f4;
+  margin-left: 0.5em;
+}
+
+.header-icons a:hover{
+  color: #888;
+}
+
+.header-message{
+  grid-area: message;
+  font-family: 'Roboto',sans-serif;
+  font-style: italic;
+  font-size: 28px;
+  text-transform: uppercase;
+  animation: appear-next 5s forwards;
+}
+
+.scroll-down{
+  grid-area: down;
+  position: relative;
+  padding-top: 5em;
+  animation: appear 5s forwards;
+}
+
+.scroll-down button{
+  border-style: none;
+  background: none;
+  color: #f4f4f4;
+  font-size: 26px;
+}
+
+.scroll-down button:active{
+  border-style: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0 8px;
+}
+
+.scroll-down:hover button, .scroll-down:hover i{
+  cursor: pointer;
+  color: rgb(189, 189, 189,0.4);
+}
+
+.scroll-down i{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  animation: sdb05 1.5s infinite;
+}
+
 
 @keyframes opacity-background{
   0% { filter: opacity(0.0); }
-  100% { filter: opacity(0.3); }
+  100% { filter: opacity(0.2); }
 }
 
 @keyframes line {
   0%   { width: 0 }
   50% { width: 0 }
-  100% { width: 80%; }
+  100% { width: 60%; }
 }
 
 @keyframes appear{
@@ -46,98 +160,6 @@ a {
   0%   { opacity: 0; }
   50% { opacity: 0; }
   100% { opacity: 1; }
-}
-
-.icons{
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  text-align: center;
-  margin-top: 23%;
-  height: auto;
-  font-size: 20px;
-  z-index: 2;
-  animation: appear-next 4s forwards;
-}
-
-.icons a{
-  width: 20%;
-  height: 2em;
-  color: #f4f4f4;
-}
-
-.icons a:hover{
-  color: #888888;
-}
-
-.message{
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  text-align: center;
-  padding: 20em;
-  font-family: 'Roboto',sans-serif;
-  font-style: italic;
-  text-transform: uppercase;
-  z-index: 1;
-  font-size: 28px;
-  animation: appear-next 5s forwards;
-}
-
-.header::after {
-  content: '';
-  height: 100%;
-  width: 100%;
-  background-image: url('/img/header_bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  animation: opacity-background 3s forwards;
-}
-
-.header-content {
-  position: absolute;
-  z-index: 1;
-  top: 20%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  animation: appear 5s forwards;
-}
-
-.header-content img{
-  height: auto;
-}
-
-.header-content h1{
-  margin: 0;
-  width: 10em;
-  margin: auto;
-  position: relative;
-}
-
-.header-content h1::after, .header-content h1::before{
-  content: '';
-  height: 10px;
-  width: 80%;
-  display: block;
-  position: absolute;
-  background-color: #f4f4f4;
-  animation: line 2s forwards;
-}
-
-.header-content h1::after{
-  left: 10%;
-  top: -10%;
-}
-
-.header-content h1::before{
-  right: 10%;
-  bottom: -80%;
 }
 
 .title {
@@ -157,47 +179,6 @@ a {
 .header-content .text {
   line-height: 1.7;
   margin-top: 1rem;
-}
-
-.scroll-down{
-  position: absolute;
-  bottom: 10%;
-  width: 100%;
-  text-align: center;  
-  left: 0; 
-  z-index: 1;
-  animation: appear 5s forwards;
-}
-
-.scroll-down button{
-  border-style: none;
-  background: none;
-  color: #ffffff;
-  font-size: 1.5em;
-}
-
-.scroll-down button:active{
-    border-style: none;
-    outline: none;
-    box-shadow: none;
-    padding: 0 8px;
-}
-
-.scroll-down:hover button, .scroll-down:hover i{
-  cursor: pointer;
-  color: rgb(189, 189, 189,0.4);
-}
-
-.scroll-down i{
-  position: absolute;
-  top: -170%;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  -webkit-animation: sdb05 1.5s infinite;
-  animation: sdb05 1.5s infinite;
-  box-sizing: border-box;
 }
 
 @-webkit-keyframes sdb05 {
@@ -445,41 +426,57 @@ footer h3{
 
 /* RESPONSIVE */
 @media (max-width: 560px) {
-  .header-content{
-    height: 90%;
-    top: 15%;
-    left: 10px;
-    width: auto;
+
+  .header{
+    grid-template-rows: 3em repeat(4,auto);
+    grid-template-areas: 
+      ". . ."
+      "title title title"
+      ". icons ."
+      ". message ."
+      ". down ."
   }
 
   .header::after{
-    background-attachment: cover;
-    background-position: left;
+    background-image: url('/img/header_small.jpg');
   }
 
-  .title{
-    font-size: 42px;
+  .header-title h1{
+    font-size: 40px;
+  }
+
+  .header-title h1::after{
+    left: 10%;
   }
   
-  .icons{
+  .header-title h1::before{
+    right: 10%;
+  }  
+  
+  .header-icons{
     padding: 0;
     font-size: 25px;
-    margin-top: 10em;
   }
   
-  .message{
-    padding: 0;
-    margin-top: 15em;
+  .header-message{
     font-size: 22px; 
+  }
+
+  .scroll-down{
+    padding-top: 0;
+    padding-bottom: 3em;
+  }
+
+  .scroll-down i{
+    top: -50%;
+  }
+
+  @keyframes line {
+    100% { width: 80%; }
   }
 
   .grid-3, .grid-2 {
     grid-template-columns: 1fr;
-  }
-
-  .header-content h1{
-    width: 8em;
-
   }
 
   .skills div {
@@ -496,12 +493,5 @@ footer h3{
     bottom: 15%;
     left: -20px;
     font-size: 16px;
-  }
-}
-
-/* Landscape */
-@media(max-height: 500px) {
-  .header-content {
-    top: 0;
   }
 }
