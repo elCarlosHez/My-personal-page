@@ -22,9 +22,6 @@ composer install
 Then remove **.example** from config.php and replace fields with your mail information and recaptcha key.
 
 ## Demo and aditional comments
-You can watch demo page at this [link]
+You can watch demo page at this [link](https://www.elcarlosarellano.com)
 
-This page were based on [Fazt project] and at some point I will implemente Webpack.
-
-[link]:('https://www.elcarlosarellano.com')
-[Fazt project]:(https://github.com/FaztWeb/landing-page-three)
+This page were based on [Fazt project](https://github.com/FaztWeb/landing-page-three) and at some point I will implemente Webpack.
