@@ -1,0 +1,26 @@
+{
+  "name": "my-personal-page",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elCarlosHez/My-personal-page.git"
+  },
+  "author": "Carlos Arellano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elCarlosHez/My-personal-page/issues"
+  },
+  "homepage": "https://github.com/elCarlosHez/My-personal-page#readme",
+  "devDependencies": {
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
+  }
+}
