@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mi página | Carlos Arellano</title>
+    <!-- Cache -->
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico?v=2" type="image/x-icon"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,700i" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="./css/aos.css">
+    <!-- Font Awesome -->
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@8.0.6/dist/sweetalert2.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header id="header" class="header ">
+      <div class="header-title">
+          <h1 class="title">Carlos Arellano</h2>
+          <p class="sub-title">Desarollador Web Full Stack</p>
+      </div>
+      <div class="header-icons">
+        <a href="https://github.com/elCarlosHez" target="_blank"
+          ><i class="fab fa-github-square fa-2x"></i>
+        </a>
+        <a href="mailto:contacto@elcarlosarellano.com"
+          ><i class="fas fa-envelope-square fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/el-carlos-arellano" target="_blank">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+      </div>
+      <div class="header-message">
+        <p>Se 1% mejor cada día</p>
+      </div>
+      <div id="scroll-down" class="scroll-down">
+        <i class="fas fa-chevron-down fa-2x"></i>
+        <button>
+          Conocer más ...
+        </button>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section id="abaout" data-aos="fade-up" class="about bg-light">
+      <div class="container">
+        <div class="grid-2">
+          <div class="center">
+            <img src="./img/logo.png" alt="Foto de Carlos Arellano">
+          </div>
+          <div>
+            <h3 class="title">Sobre mí ...</h3>
+            <p>Mi nombre es Carlos Arellano, soy estudiante universitario y un apasionado por el desarollo web. Busco nuevos retos para poner a prueba mis conocimientos y capacidades.</p>
+            <p>En mis tiempos libres disfruto de actividades como la lectura o escuchar música.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" data-aos="fade-up" class="skills bg-dark text-center">
+      <h3 class="title">Habilidades</h3>
+      <div class="container grid-2">
+        <div>
+          <i class="fab fa-empire fa-5x"></i>
+          <h3>Backend</h3>
+          <ul class="list-skills">
+            <li>Mysql, Postgres, y SQLite <i class="fas fa-database"></i></li>
+            <li>C/C++ <i class="fab fa-cuttlefish"></i></li>
+            <li>PHP/Laravel <i class="fab fa-laravel"></i> <i class="fab fa-php"></i></li>
+            <li>API REST <i class="fas fa-code"></i></li>
+            <li>Nginx - Apache <i class="fas fa-server"></i></li>
+          </ul>
+        </div>
+        <div>
+          <i class="fab fa-rebel fa-5x"></i>
+          <h3>Fronted</h3>
+          <ul class="list-skills">
+            <li>HTML, CSS y JavaScript <i class="fab fa-html5"></i> <i class="fab fa-css3-alt"></i> <i class="fab fa-js-square"></i></li>
+            <li>Vue <i class="fab fa-vuejs"></i></li>
+            <li>Sass <i class="fab fa-sass"></i></li>
+            <li>Webpack <i class="fa-webpack"></i></li>
+            <li>Git <i class="fab fa-gitlab"></i></li>
+          </ul>
+        </div>
+        <p>** Git no es necesariamente una tecnología front, pero no quería romper la simetría.</p>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section  id="experience" data-aos="fade-up" class="experience bg-light">
+      <div class="container text-center">
+        <div class="grid-3">
+          <div class="center text-center">
+            <i class="fas fa-graduation-cap fa-10x"></i>
+          </div>
+          <div>
+            <h3 class="title">Educación</h3>
+            <ol class="timeline">
+              <li class="timeline-item" >
+                <div class="timeline-item-container" data-aos="fade-left">
+                  <time class="timeline-item-date" datetime="2017-01-11">2017</time>
+                  <p>Empiezo la Ingeniería en computación</p>
+                </div>
+              </li>
+              <li class="timeline-item">
+                <div class="timeline-item-container" data-aos="fade-right">
+                  <time datetime="2018-02-11">2018</time>
+                  <p>Empezando a estudiar desarollo Web</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <h3 class="title">Experiencia</h3>
+            <ol class="timeline">
+              <li class="timeline-item">
+                <div class="timeline-item-container" data-aos="fade-left">
+                  <time datetime="2018-11-20">2018</time>
+                  <p>Comienzo en Rooster Interactive</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" data-aos="fade-up" class="about bg-dark">
+      <div class="container">
+        <div class="grid-2">
+          <div class="center text-center">
+            <h3 class="title">Contacto</h3>
+            <form id="form-email" action="/mail.php" method="post" class="form-contact">
+              <input id="captchav3" type="hidden" name="recaptcha" value="">
+              <input type="text" name="name" placeholder="Nombre" required>
+              <input type="email" name="email" placeholder="Correo electronico" required>
+              <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+              <input id="sendEmail" type="submit" value="Enviar">
+            </form>
+          </div>
+          <div class="center text-center">
+            <i class="fas fa-envelope fa-10x"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="bg-light">
+      <div class="container text-center">
+        <div class="grid-3">
+          <div>
+            <h3>Secciones</h3>
+            <a href="#header">Inicio</a>
+            <a href="#abaout">Sobre mí ...</a>
+            <a  href="#skills">Habilidades</a>
+            <a href="#experience">Educación y experiencia</a>
+            <a href="#contact">Contacto</a>
+          </div>
+          <div class="center">
+            <h3>Lenguaje</h3>
+            <a href="#">Español</a>
+            <a href="#">Ingles</a>
+          </div>
+          <div>
+              <h3>Contactamé</h3>
+              <a href="mailto:contacto@elcarlosarellano.com">contacto@elcarlosarellano.com</a>
+              <a href="https://www.linkedin.com/in/el-carlos-arellano" target="_blank">Linkedin</a>
+              <a href="https://api.whatsapp.com/send?phone=523313212251"><i class="fab fa-whatsapp"></i> +52 33 13 21 2251</a>
+            </div>
+        </div>
+      </div>  
+    </footer>
+    <!-- Aos Script -->
+    <script src="./js/aos.js"></script>
+    <!-- reCaptcha v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lfsc5AUAAAAAECXlGE6YiH2YrJ9cwLNIaFe0iqg"></script>
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.0.6/dist/sweetalert2.all.min.js"></script>
+    <!-- Main Script -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

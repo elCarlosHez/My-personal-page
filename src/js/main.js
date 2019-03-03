@@ -1,3 +1,4 @@
+import './../sass/app.scss';
 
 window.addEventListener('load',function(e){
     AOS.init({
