@@ -20,7 +20,10 @@
     "url": "https://github.com/elCarlosHez/My-personal-page/issues"
   },
   "homepage": "https://github.com/elCarlosHez/My-personal-page#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0"
+  },
   "dependencies": {
     "css-loader": "^2.1.0",
     "html-webpack-plugin": "^3.2.0",

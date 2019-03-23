@@ -21,17 +21,28 @@ module.exports = {
                     { loader: 'css-loader' },
                     { loader: 'sass-loader' }
                 ]
-            }
+            },
+            { 
+                test: /\.pug$/,
+                use: [
+                    { 
+                        loader: 'pug-loader',
+                        options: {
+                            pretty: true
+                        }
+                    },
+                ],
+            },
         ]
     },
 
     plugins: [
         new HtmlWebpackPLugin({
-            template: './src/html/index.html',
-            output: __dirname + '/dist/'
+            template: './src/pug/master.pug',
+            output: __dirname + '/dist/',
         }),
         new MiniCssExtractPlugin({
-            filename: 'app.css'
+            filename: 'app.css',
         })
     ]
 }
